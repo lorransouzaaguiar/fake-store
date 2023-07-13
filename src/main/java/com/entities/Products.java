@@ -17,6 +17,7 @@ public class Products {
     private int quantity;
 
     @ManyToOne
+    @JoinColumn(name = "category_id")
     private ProductCategories category;
 
     @Column

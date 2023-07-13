@@ -18,4 +18,7 @@ public class ProductCategories {
     @Column
     @Temporal(TemporalType.DATE)
     private Date updatedAt;
+
+    @OneToMany(mappedBy = "category")
+    private List<Products> products;
 }
