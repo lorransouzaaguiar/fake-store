@@ -11,16 +11,16 @@ public class User {
     private String name;
 
     @Column()
-    private String email;
+    private String emaiaManyToOnel;
 
     @Column()
     private String password;
 
-    @OneToMany()
-    private List<String> users;
+    @OneToMany(mappedBy = "sellers")
+    private List<User> sellers;
 
-    @OneToMany()
-    private List<String> buyers;
+    @OneToMany(mappedBy = "buyers")
+    private List<User> buyers;
 
     @Column()
     @Temporal(TemporalType.TIMESTAMP)
